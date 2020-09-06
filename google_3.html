@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Google</title>
+</head>
+<style>
+    a{
+        text-decoration: none;
+        color: #5F6368;
+    }
+    .link a {
+        color: rgba(0,0,0,0.87);
+        font-size: 13px;
+        padding-right: 9px;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    .link {
+        text-align: right;
+        position: absolute;
+        right: 42px;
+        margin-top: 18px;
+    }
+    #imgButton {
+        padding-right: 9px;
+        vertical-align: middle;
+    }
+    #login{
+        color: white;
+        font-weight: bold;
+        background-color: #4285f4;
+        padding: 5px 12px;
+        border-style: none;
+    }
+    .google {
+        text-align: center;
+    }
+    #googleImg {
+        width: 272px;
+        height: 92px;
+        padding-top: 150px;
+    }
+    #googleSearch {
+        width: 600px;
+        height: 45px;
+        margin-top: 25px;
+        margin-left: 70px;
+        border: 1px solid #dfe1e5;
+        border-radius: 20px;
+        background-image: url(data:image/png;base64,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);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: 20px center;
+    }
+    .twoButtons{
+        height: 36px;
+        border-style: none;
+        margin: 30px 5px;
+        padding: 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        background-color: #f2f2f2;
+        color: #5F6368;
+        letter-spacing : 0.5px;
+        /**vertical-align: middle;**/
+        line-height: 8px;
+    }
+    .bottom {
+        background-color: #f2f2f2;
+        color: #5F6368;
+        position: absolute;
+        bottom:0;
+        width: 100%;
+        font-size: 15px;
+    }
+    .borderBottom{
+        border-top: 1px solid #e4e4e4;
+        margin: 0;
+        padding: 10px 10px 10px 30px;
+    }
+    body {
+        margin: 0;
+    }
+    #right{
+        float: right;
+    }
+    .borderBottom a{
+        padding-right: 20px;
+        letter-spacing : -0.5px;
+    }
+    .twoButtons:hover{
+        background-color: rgba(228, 228, 228, 0.21);
+        border: 1px solid #e4e4e4;
+    }
+    .twoButtons:active{
+        border: 2px solid #007bff;
+    }
+    #googleSearch:hover{
+        box-shadow: 0 0 0.5px 1.5px #dfe1e5;
+    }
+    #mike {
+        width: 40px;
+        height: 40px;
+        position: relative;
+        top: 15px;
+        right: 85px;
+    }
+    #keyBoard {
+        position: relative;
+        top: 2px;
+        right: 90px;
+    }
+</style>
+<body>
+    <div class="link">
+        <a href="https://mail.google.com/mail/?tab=wm&ogbl">Gmail</a>
+        <span><a href="https://www.google.co.kr/imghp?hl=ko&tab=wi&ogbl">이미지</a></span>
+        <input id = "imgButton" type="image" src="https://cdn.icon-icons.com/icons2/1369/PNG/512/-apps_90405.png" alt="Submit" width="25" height="25" title="google 앱">
+        <button id = "login" type="button" onclick="location.href='https://accounts.google.com/ServiceLogin?hl=ko&passive=true&continue=https://www.google.com/'">로그인</button>
+    </div>
+    <div class="google">
+        <img id="googleImg" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png">
+        <div>
+            <input id="googleSearch" type="search">
+            <a href="https://www.google.com/" title="입력도구"><img id = "keyBoard" src="https://www.gstatic.com/inputtools/images/tia.png"></a>
+            <a href="https://www.google.com/" title="음성검색"><img id = "mike" src= "https://img5.yna.co.kr/etc/inner/KR/2015/09/02/AKR20150902004600091_02_i_P4.jpg"></a>
+        </div>
+        <div>
+            <button class ="twoButtons" type="button">Google 검색</button>
+            <button class ="twoButtons" type="button" onclick="location.href='https://www.google.com/doodles/'">I'm Feeling Lucky</button>
+        </div>
+    </div>
+    <div class="bottom">
+        <p class="borderBottom">대한민국</p>
+        <div class="borderBottom">
+            <a href="https://www.google.com/intl/ko_kr/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">광고</a>
+            <a href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">비즈니스</a>
+            <a href="https://about.google/?utm_source=google-KR&utm_medium=referral&utm_campaign=hp-footer&fg=1">Google 정보</a>
+            <a href="https://google.com/search/howsearchworks/?fg=1">검색의 원리</a>
+            <span id="right">
+                <a href="https://policies.google.com/privacy?hl=ko&fg=1">개인정보처리방침</a>
+                <a href="https://policies.google.com/terms?hl=ko&fg=1">약관</a>
+                <a href="https://www.google.com/preferences?hl=ko">설정</a>
+            </span>
+        </div>
+    </div>
+</body>
+</html>

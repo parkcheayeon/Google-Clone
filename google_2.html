@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Google</title>
+</head>
+<style>
+    a{
+        text-decoration: none;
+        color: #5F6368;
+    }
+    .link a {
+        color: rgba(0,0,0,0.87);
+        font-size: 13px;
+        padding-right: 9px;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    .link {
+        text-align: right;
+        position: absolute;
+        right: 42px;
+        margin-top: 18px;
+    }
+    #imgButton {
+        padding-right: 9px;
+        vertical-align: middle;
+    }
+    #login{
+        color: white;
+        font-weight: bold;
+        background-color: #4285f4;
+        padding: 5px 12px;
+        border-style: none;
+    }
+    .google {
+        text-align: center;
+    }
+    #googleImg {
+        width: 272px;
+        height: 92px;
+        padding-top: 150px;
+    }
+    #googleSearch {
+        width: 550px;
+        height: 45px;
+        margin-top: 25px;
+        border: 1px solid #dfe1e5;
+        border-radius: 20px;
+        background-image: url(https://www.gstatic.com/inputtools/images/tia.png);
+        background-repeat: no-repeat;
+        background-position: 480px center;
+    }
+    .twoButtons{
+        height: 36px;
+        border-style: none;
+        margin: 30px 5px;
+        padding: 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        background-color: #f2f2f2;
+        color: #5F6368;
+        letter-spacing : 0.5px;
+        /**vertical-align: middle;**/
+        line-height: 8px;
+    }
+    .bottom {
+        background-color: #f2f2f2;
+        color: #5F6368;
+        position: absolute;
+        bottom:0;
+        width: 100%;
+        font-size: 15px;
+    }
+    .borderBottom{
+        border-top: 1px solid #e4e4e4;
+        margin: 0;
+        padding: 10px 10px 10px 30px;
+    }
+    body {
+        margin: 0;
+    }
+    #right{
+        float: right;
+    }
+    .borderBottom a{
+        padding-right: 20px;
+        letter-spacing : -0.5px;
+    }
+    .twoButtons:hover{
+        background-color: rgba(228, 228, 228, 0.21);
+        border: 1px solid #e4e4e4;
+    }
+    .twoButtons:active{
+        border: 2px solid #007bff;
+    }
+    #googleSearch:hover{
+        box-shadow: 0 0 0.5px 1.5px #dfe1e5;
+    }
+</style>
+<body>
+    <div class="link">
+        <a href="https://mail.google.com/mail/?tab=wm&ogbl">Gmail</a>
+        <span><a href="https://www.google.co.kr/imghp?hl=ko&tab=wi&ogbl">이미지</a></span>
+        <input id = "imgButton" type="image" src="https://cdn.icon-icons.com/icons2/1369/PNG/512/-apps_90405.png" alt="Submit" width="25" height="25">
+        <button id = "login" type="button" onclick="location.href='https://accounts.google.com/ServiceLogin?hl=ko&passive=true&continue=https://www.google.com/'">로그인</button>
+    </div>
+    <div class="google">
+        <img id="googleImg" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png">
+        <div>
+            <input id="googleSearch" type="search">
+        </div>
+        <div>
+            <button class ="twoButtons" type="button">Google 검색</button>
+            <button class ="twoButtons" type="button" onclick="location.href='https://www.google.com/doodles/'">I'm Feeling Lucky</button>
+        </div>
+    </div>
+    <div class="bottom">
+        <p class="borderBottom">대한민국</p>
+        <div class="borderBottom">
+            <a href="https://www.google.com/intl/ko_kr/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">광고</a>
+            <a href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">비즈니스</a>
+            <a href="https://about.google/?utm_source=google-KR&utm_medium=referral&utm_campaign=hp-footer&fg=1">Google 정보</a>
+            <a href="https://google.com/search/howsearchworks/?fg=1">검색의 원리</a>
+            <span id="right">
+                <a href="https://policies.google.com/privacy?hl=ko&fg=1">개인정보처리방침</a>
+                <a href="https://policies.google.com/terms?hl=ko&fg=1">약관</a>
+                <a href="https://www.google.com/preferences?hl=ko">설정</a>
+            </span>
+        </div>
+    </div>
+</body>
+</html>
